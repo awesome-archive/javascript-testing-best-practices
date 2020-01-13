@@ -2,121 +2,114 @@
 
 <br/>
 
-# 👇 Why this guide can take your testing skills to the next level 
+# 👇 Por que este guia pode levar suas habilidades de teste para o próximo nível
 
 <br/>
 
-## 📗 45+ best practices: Super-comprehensive and exhaustive
-This is a guide for JavaScript & Node.js reliability from A-Z. It summarizes and curates for you dozens of the best blog posts, books and tools the market has to offer
+## 📗 45+ boas práticas: Super abrangente e exaustivo
+Este é um guia para a confiabilidade JavaScript & Node.js da A-Z. Ele resume e organiza para você dezenas das melhores publicações, livros, ferramentas e postagens de blogs que o mercado tem a oferecer
 
 
-## 🚢 Advanced: Goes 10,000 miles beyond the basics
-Hop into a journey that travels way beyond the basics into advanced topics like testing in production, mutation testing, property-based testing and many other strategic & professional tools. Should you read every word in this guide your testing skills are likely to go way above the average
+## 🚢 Avançado: vai 10.000 milhas além do básico
+Entre em uma jornada que vai muito além do básico, para tópicos avançados como testes em produção, testes de mutação, testes baseados em propriedades e muitas outras ferramentas estratégicas e profissionais. Se você ler todas as palavras deste guia, é provável que suas habilidades de teste superem a média
 
 
-## 🌐 Full-stack: front, backend, CI, anything
-Start by understanding the ubiquitous testing practices that are the foundation for any application tier. Then, delve into your area of choice: frontend/UI, backend, CI or maybe all of them?
-
-<br/>
-
-### Written By Yoni Goldberg
-* A JavaScript & Node.js consultant
-* 👨‍🏫 [My testing workshop](https://www.testjavascript.com) -  learn about [my workshops](https://www.testjavascript.com) in Europe & US
-* [Follow me on Twitter ](https://twitter.com/goldbergyoni/)
-* Come hear me speak at [LA](https://js.la/), [Verona](https://2019.nodejsday.it/), [Kharkiv](https://kharkivjs.org/), [free webinar](https://zoom.us/webinar/register/1015657064375/WN_Lzvnuv4oQJOYey2jXNqX6A). Future events TBD
-* [My JavaScript Quality newsletter](https://testjavascript.com/newsletter/) - insights and content only on strategic matters
+## 🌐 Full-stack: front, backend, CI(Integração Contínua), qualquer coisa
+Comece entendendo as práticas de teste onipresentes que são a base para qualquer camada de aplicativo. Em seguida, mergulhe na sua área de escolha: front-end/UI, back-end, CI(Integração Contínua) ou talvez todos eles?
 
 <br/>
 
-### Translations - read in your own language
-* 🇨🇳[Chinese](readme-zh-CN.md) - courtesy of [Yves yao](https://github.com/yvesyao)
-* 🇰🇷[Korean](readme.kr.md) - courtesy of [Rain Byun](https://github.com/ragubyun)
-* Want to translate to your own language? please open an issue 💜
+### Escrito por Yoni Goldberg
+* Um consultor JavaScript & Node.js
+* 👨‍🏫 [Minha oficina de testes](https://www.testjavascript.com) -  aprenda sobre [meus workshops](https://www.testjavascript.com) na Europe & Estados Unidos
+* [Me siga no twitter ](https://twitter.com/goldbergyoni/)
+* Venha me ouvir falar em [LA](https://js.la/), [Verona](https://2019.nodejsday.it/), [Kharkiv](https://kharkivjs.org/), [free webinar](https://zoom.us/webinar/register/1015657064375/WN_Lzvnuv4oQJOYey2jXNqX6A). Eventos futuros TBD
+* [Newsletter informativo de qualidade sobre JavaScript](https://testjavascript.com/newsletter/) - insights e conteúdo apenas em assuntos estratégicos
 
 
 <br/><br/>
 
-## `Table of Contents`
+## `Índice`
 
-#### [`Section 0: The Golden Rule`](#section-0️⃣-the-golden-rule)
+#### [`Seção 0: A Regra de ouro`](#section-0️⃣-the-golden-rule)
 
-A single advice that inspires all the others (1 special bullet)
+Um único conselho que inspira todos os outros (1 marcador especial)
 
-#### [`Section 1: The Test Anatomy`](#section-1-the-test-anatomy-1)
+#### [`Seção 1: A Anatomia do Teste`](#section-1-the-test-anatomy-1)
 
-The foundation - structuring clean tests (12 bullets)
+A fundação - estruturando testes limpos (12 marcadores)
 
-#### [`Section 2: Backend`](#section-2️⃣-backend-testing)
+#### [`Seção 2: Backend`](#section-2️⃣-backend-testing)
 
-Writing backend and Microservices tests efficiently (8 bullets)
+Escrevendo testes de back-end e microsserviços com eficiência (8 marcadores)
 
-#### [`Section 3: Frontend`](#section-3️⃣-frontend-testing)
+#### [`Seção 3: Frontend`](#section-3️⃣-frontend-testing)
 
-Writing tests for web UI including component and E2E tests (11 bullets)
+Escrevendo testes para interface do usuário da web, incluindo testes de componentes e E2E (11 marcadores)
 
-#### [`Section 4: Measuring Tests Effectiveness`](#section-4️⃣-measuring-test-effectiveness)
+#### [`Seção 4: Metrificando Testes Efetivamente`](#section-4️⃣-measuring-test-effectiveness)
 
-Watching the watchman - measuring test quality (4 bullets)
+Observando o vigia - medindo a qualidade do teste (4 marcadores)
 
-#### [`Section 5: Continuous Integration`](#section-5️⃣-ci-and-other-quality-measures)
+#### [`Seção 5: Integração Contínua`](#section-5️⃣-ci-and-other-quality-measures)
 
-Guidelines for CI in the JS world (9 bullets)
+Diretrizes para CI no mundo JS (9 marcadores)
 
 
 <br/><br/>
 
 
-# Section 0️⃣: The Golden Rule
+# Seção 0️⃣: A Regra de Ouro
 
 <br/>
 
-## ⚪️ 0. The Golden Rule: Design for lean testing
+## ⚪️ 0. A Regra de Ouro: Design para testes enxutos
 
-:white_check_mark: **Do:** 
-Testing code is not like production-code - design it to be dead-simple, short, abstraction-free, flat, delightful to work with, lean. One should look at a test and get the intent instantly. 
+:white_check_mark: **Faça:**
+O código de teste não é como o código de produção - projete-o para ser simples, curto, sem abstrações, plano, agradável de se trabalhar, enxuto. Deve-se olhar para um teste e obter a intenção instantaneamente.
 
-Our minds are full with the main production code, we don't have 'headspace' for additional complexity. Should we try to squeeze yet another challenging code into our poor brain it will slow the team down which works against the reason we do testing. Practically this is where many teams just abandon testing.
- 
-The tests are an opportunity for something else - a friendly and smiley assistant, one that it's delightful to work with and delivers great value for such a  small investment.  Science tells us that we have two brain systems: system 1 is used for effortless activities like driving a car on an empty road and system 2 which is meant for complex and conscious operations like solving a math equation. Design your test for system 1, when looking at test code it should *feel* as easy as modifying an HTML document and not like solving 2X(17 × 24).
+Nossas mentes estão cheias com o código principal de produção, não temos 'espaço de sobra' para complexidade adicional. Se tentarmos espremer outro código desafiador em nosso cérebro fraco, a equipe ficará mais lenta, o que vai de encontro com a razão pela qual fazemos os testes. Praticamente é aqui que muitas equipes abandonam os testes.
 
-This can be achieved by selectively cherry-picking techniques, tools and test targets that are cost-effective and provide great ROI. Test only as much as needed, strive to keep it nimble, sometimes it's even worth dropping some tests and trade reliability for agility and simplicity.
+Os testes são uma oportunidade para outra coisa - um assistente amigável e sorridente, que é agradável de trabalhar e oferece grande valor para um investimento tão pequeno. A ciência diz que temos dois sistemas cerebrais: o sistema 1, usado para atividades sem esforço, como dirigir um carro em uma estrada vazia, e o sistema 2, destinado a operações complexas e conscientes, como resolver uma equação matemática. Projete seu teste para o sistema 1, ao analisar o código de teste, ele deve parecer tão fácil quanto modificar um documento HTML e não como resolver um equação 2X (17 × 24).
+
+Isso pode ser alcançado através de técnicas, ferramentas e alvos de teste selecionados de forma econômica, que são econômicos e proporcionam um ótimo ROI. Teste apenas o necessário, esforce-se para mantê-lo ágil, às vezes vale a pena abandonar alguns testes e trocar a confiabilidade por agilidade e simplicidade.
 
 ![alt text](/assets/headspace.png "We have no head room for additional complexity")
  
-Most of the advice below are derivatives of this principle.
+A maioria dos conselhos abaixo são derivados desse princípio.
 
-### Ready to start?
+### Pronto para começar?
 
 
 <br/><br/>
 
-# Section 1: The Test Anatomy
+# Seção 1: A Anatomia do Teste
 
 <br/>
 
-## ⚪ ️ 1.1 Include 3 parts in each test name
+## ⚪ ️ 1.1 Inclua 3 partes em cada nome de teste
 
-:white_check_mark: **Do:** A test report should tell whether the current application revision satisfies the requirements for the people who are not necessarily familiar with the code: the tester, the DevOps engineer who is deploying and the future you two years from now. This can be achieved best if the tests speak at the requirements level and include 3 parts:
+:white_check_mark: **Faça:** Um relatório de teste deve informar se a revisão atual do aplicativo atende aos requisitos para as pessoas que não estão necessariamente familiarizadas com o código: o testador, o engenheiro DevOps que está implantando e você daqui a dois anos. Isso pode ser melhor alcançado se os testes falarem no nível de requisitos e incluirem 3 partes:
 
-(1) What is being tested? For example, the ProductsService.addNewProduct method
+(1) O que está sendo testado? Por exemplo, o método ProductsService.addNewProduct
 
-(2) Under what circumstances and scenario? For example, no price is passed to the method
+(2) Sob que circunstâncias e cenário? Por exemplo, nenhum preço é passado para o método
 
-(3) What is the expected result? For example, the new product is not approved
-
-<br/>
-
-
-❌ **Otherwise:** A deployment just failed, a test named “Add product” failed. Does this tell you what exactly is malfunctioning?
+(3) Qual é o resultado esperado? Por exemplo, o novo produto não é aprovado
 
 <br/>
 
-**👇 Note:** Each bullet has code examples and sometime also an image illustration. Click to expand
-<details><summary>✏ <b>Code Examples</b></summary>
+
+❌ **Caso contrário:** Uma implantação acabou de falhar, um teste chamado "Adicionar produto" falhou. Isso diz o que exatamente está com defeito?
+
+<br/>
+
+**👇 Nota:** Cada marcador possui exemplos de código e alguns tem ilustrações. Clique para expandir
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
   
 <br/>
   
-### :clap: Doing It Right Example: A test name that constitutes 3 parts
+### :clap: Exemplo: um nome de teste que constitui 3 partes
 
 ![](https://img.shields.io/badge/🔨%20Example%20using%20Mocha-blue.svg
  "Using Mocha to illustrate the idea")
@@ -136,32 +129,32 @@ describe('Products Service', function() {
 ```
 <br/>
 
-### :clap: Doing It Right Example: A test name that constitutes 3 parts
+### :clap: Exemplo: um nome de teste que constitui 3 partes
 ![alt text](/assets/bp-1-3-parts.jpeg "A test name that constitutes 3 parts")
 
 </details>
 
 <br/><br/>
 
-## ⚪ ️ 1.2 Structure tests by the AAA pattern
+## ⚪ ️ 1.2 Testes de estrutura pelo padrão em inglês AAA
 
-:white_check_mark: **Do:** Structure your tests with 3 well-separated sections Arrange, Act & Assert (AAA). Following this structure guarantees that the reader spends no brain-CPU on understanding the test plan:
+:white_check_mark: **Faça:** Estruture seus testes com 3 seções bem separadas: Organizar, Atuar e Afirmar (OAA). Seguir essa estrutura garante que o leitor não gaste CPU do cérebro na compreensão do plano de teste:
 
-1st A - Arrange: All the setup code to bring the system to the scenario the test aims to simulate. This might include instantiating the unit under test constructor, adding DB records, mocking/stubbing on objects and any other preparation code
+1st O - Organizar: todo o código de configuração para levar o sistema ao cenário que o teste pretende simular. Isso pode incluir instanciar a unidade sob o construtor de teste, adicionar registros de banco de dados, mockar/stubbing de objetos e qualquer outro código de preparação
 
-2nd A - Act: Execute the unit under test. Usually 1 line of code
+2nd A - Ato: Execute teste em unidade. Geralmente 1 linha de código
 
-3rd A - Assert: Ensure that the received value satisfies the expectation. Usually 1 line of code
+3rd A - Afirmar: Garanta que o valor recebido satisfaça a expectativa. Geralmente 1 linha de código
 
 
 <br/>
 
 
-❌ **Otherwise:** Not only do you spend hours understanding the main code, but what should have been the simplest part of the day (testing) stretches your brain
+❌ **Caso contrário:** Você não gata apenas longas horas diárias para entender o código principal, agora também o que deveria ter sido a parte simples do dia (teste) estica seu cérebro
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
 <br/>
 
@@ -214,11 +207,11 @@ test('Should be classified as premium', () => {
 
 ## ⚪ ️1.3 Describe expectations in a product language: use BDD-style assertions
 
-:white_check_mark: **Do:** Coding your tests in a declarative-style allows the reader to get the grab instantly without spending even a single brain-CPU cycle. When you write imperative code that is packed with conditional logic, the reader is forced to exert more brain-CPU cycles. In that case, code the expectation in a human-like language, declarative BDD style using `expect` or `should` and not using custom code. If Chai & Jest doesn't include the desired assertion and it’s highly repeatable, consider [extending Jest matcher (Jest)](https://jestjs.io/docs/en/expect#expectextendmatchers) or writing a [custom Chai plugin](https://www.chaijs.com/guide/plugins/)
+:white_check_mark: **Do:** Coding your tests in a declarative-style allows the reader to get the grab instantly without spending even a single brain-CPU cycle. When you write an imperative code that is packed with conditional logic the reader is thrown away to an effortful mental mood. In that sense, code the expectation in a human-like language, declarative BDD style using expect or should and not using custom code. If Chai & Jest don’t include the desired assertion and it’s highly repeatable, consider [extending Jest matcher (Jest)](https://jestjs.io/docs/en/expect#expectextendmatchers) or writing a [custom Chai plugin](https://www.chaijs.com/guide/plugins/)
 <br/>
 
 
-❌ **Otherwise:** The team will write less tests and decorate the annoying ones with .skip()
+❌ **Otherwise:** The team will write less test and decorate the annoying ones with .skip()
 
 <br/>
 
@@ -235,7 +228,7 @@ test("When asking for an admin, ensure only ordered admins in results" , () => {
     //assuming we've added here two admins "admin1", "admin2" and "user1"
     const allAdmins = getUsers({adminOnly:true});
 
-    let admin1Found, adming2Found = false;
+    const admin1Found, adming2Found = false;
 
     allAdmins.forEach(aSingleUser => {
         if(aSingleUser === "user1"){
@@ -279,11 +272,11 @@ it("When asking for an admin, ensure only ordered admins in results" , () => {
 
 ## ⚪ ️  1.4 Stick to black-box testing: Test only public methods
 
-:white_check_mark: **Do:** Testing the internals brings huge overhead for almost nothing. If your code/API delivers the right results, should you really invest your next 3 hours in testing HOW it worked internally and then maintain these fragile tests? Whenever a public behavior is checked, the private implementation is also implicitly tested and your tests will break only if there is a certain problem (e.g. wrong output). This approach is also referred to as `behavioral testing`. On the other side, should you test the internals (white box approach) — your focus shifts from planning the component outcome to nitty-gritty details and your test might break because of minor code refactors although the results are fine - this dramatically increases the maintenance burden
+:white_check_mark: **Do:** Testing the internals brings huge overhead for almost nothing. If your code/API deliver the right results, should you really invest your next 3 hours in testing HOW it worked internally and then maintain these fragile tests? Whenever a public behavior is checked, the private implementation is also implicitly tested and your tests will break only if there is a certain problem (e.g. wrong output). This approach is also referred to as behavioral testing. On the other side, should you test the internals (white box approach) — your focus shifts from planning the component outcome to nitty-gritty details and your test might break because of minor code refactors although the results are fine- this dramatically increases the maintenance burden
 <br/>
 
 
-❌ **Otherwise:** Your tests behave like the [boy who cried wolf](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf): shouting false-positive cries (e.g., A test fails because a private variable name was changed). Unsurprisingly, people will soon start to ignore the CI notifications until someday, a real bug gets ignored…
+❌ **Otherwise:** Your test behaves like the [child who cries wolf](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf): shoot out loud false-positive cries (e.g., A test fails because a private variable name was changed). Unsurprisingly, people will soon start to ignore the CI notifications until someday a real bug will get ignored…
 
 <br/>
 <details><summary>✏ <b>Code Examples</b></summary>
@@ -297,7 +290,7 @@ it("When asking for an admin, ensure only ordered admins in results" , () => {
 class ProductService{
   //this method is only used internally
   //Change this name will make the tests fail
-  calculateVATAdd(priceWithoutVAT){
+  calculateVAT(priceWithoutVAT){
     return {finalPrice: priceWithoutVAT * 1.2};
     //Change the result format or key name above will make the tests fail
   }
@@ -305,7 +298,6 @@ class ProductService{
   getPrice(productId){
     const desiredProduct= DB.getProduct(productId);
     finalPrice = this.calculateVATAdd(desiredProduct.price).finalPrice;
-    return finalPrice;
   }
 }
 
@@ -326,11 +318,11 @@ it("White-box test: When the internal methods get 0 vat, it return 0 response", 
 
 ## ⚪ ️ ️1.5 Choose the right test doubles: Avoid mocks in favor of stubs and spies
 
-:white_check_mark: **Do:**  Test doubles are a necessary evil because they are coupled to the application internals, yet some provide immense value (<a href="https://martinfowler.com/articles/mocksArentStubs.html" data-href="https://martinfowler.com/articles/mocksArentStubs.html" class="markup--anchor markup--p-anchor" rel="noopener nofollow" target="_blank">[Read here a reminder about test doubles: mocks vs stubs vs spies](https://martinfowler.com/articles/mocksArentStubs.html)</a>).
+:white_check_mark: **Do:**  Test doubles are a necessary evil because they are coupled to the application internals, yet some provide an immense value (<a href="https://martinfowler.com/articles/mocksArentStubs.html" data-href="https://martinfowler.com/articles/mocksArentStubs.html" class="markup--anchor markup--p-anchor" rel="noopener nofollow" target="_blank">[Read here a reminder about test doubles: mocks vs stubs vs spies](https://martinfowler.com/articles/mocksArentStubs.html)</a>).
 
-Before using test doubles, ask a very simple question: Do I use it to test functionality that appears, or could appear, in the requirements document? If no, it’s a white-box testing smell.
+Before using test doubles, ask a very simple question: Do I use it to test functionality that appears, or could appear, in the requirements document? If no, it’s a smell of white-box testing.
 
-For example, if you want to test that your app behaves reasonably when the payment service is down, you might stub the payment service and trigger some ‘No Response’ return to ensure that the unit under test returns the right value. This checks our application behavior/response/outcome under certain scenarios. You might also use a spy to assert that an email was sent when that service is down — this is again a behavioral check which is likely to appear in a requirements doc (“Send an email if payment couldn’t be saved”). On the flip side, if you mock the Payment service and ensure that it was called with the right JavaScript types — then your test is focused on internal things that got nothing with the application functionality and are likely to change frequently
+For example, if you want to test what your app behaves reasonably when the payment service is down, you might stub the payment service and trigger some ‘No Response’ return to ensure that the unit under test returns the right value. This checks our application behavior/response/outcome under certain scenarios. You might also use a spy to assert that an email was sent when that service is down — this is again a behavioral check which is likely to appear in a requirements doc (“Send an email if payment couldn’t be saved”). On the flip side, if you mock the Payment service and ensure that it was called with the right JavaScript types — then your test is focused on internal things that got nothing with the application functionality and are likely to change frequently
 <br/>
 
 
@@ -365,7 +357,6 @@ it("When a valid product is about to be deleted, ensure an email is sent", async
     const spy = sinon.spy(Emailer.prototype, "sendEmail");
     new ProductService().deletePrice(theProductWeJustAdded);
     //hmmm OK: we deal with internals? Yes, but as a side effect of testing the requirements (sending an email)
-    expect(spy.calledOnce).to.be.true;
 });
 ```
 
@@ -377,11 +368,11 @@ it("When a valid product is about to be deleted, ensure an email is sent", async
 
 ## ⚪ ️1.6 Don’t “foo”, use realistic input data
 
-:white_check_mark: **Do:**  Often production bugs are revealed under some very specific and surprising input — the more realistic the test input is, the greater the chances are to catch bugs early. Use dedicated libraries like [Faker](https://www.npmjs.com/package/faker) to generate pseudo-real data that resembles the variety and form of production data. For example, such libraries can generate realistic phone numbers, usernames, credit card, company names, and even ‘lorem ipsum’ text. You may also create some tests (on top of unit tests, not as a replacement) that randomize fakers data to stretch your unit under test or even import real data from your production environment. Want to take it to the next level? See the next bullet (property-based testing).
+:white_check_mark: **Do:**  Often production bugs are revealed under some very specific and surprising input — the more realistic the test input is, the greater the chances are to catch bugs early. Use dedicated libraries like [Faker](https://www.npmjs.com/package/faker) to generate pseudo-real data that resembles the variety and form of production data. For example, such libraries can generate realistic phone numbers, usernames, credit card, company names, and even ‘lorem ipsum’ text. You may also create some tests (on top of unit tests, not instead) that randomize fakers data to stretch your unit under test or even import real data from your production environment. Want to take it to the next level? see next bullet (property-based testing).
 <br/>
 
 
-❌ **Otherwise:** All your development testing will falsely show green when you use synthetic inputs like “Foo”, but then production might turn red when a hacker passes-in a nasty string like “@3e2ddsf . ##’ 1 fdsfds . fds432 AAAA”
+❌ **Otherwise:** All your development testing will falsely seem green when you use synthetic inputs like “Foo” but then production might turn red when a hacker passes-in a nasty string like “@3e2ddsf . ##’ 1 fdsfds . fds432 AAAA”
 
 
 <br/>
@@ -398,7 +389,7 @@ it("When a valid product is about to be deleted, ensure an email is sent", async
  
 ```javascript
 const addProduct = (name, price) =>{
-  const productNameRegexNoSpace = /^\S*$/; //no white-space allowed
+  const productNameRegexNoSpace = /^\S*$/;//no white-space allowd
 
   if(!productNameRegexNoSpace.test(name))
     return false;//this path never reached due to dull input
@@ -451,25 +442,25 @@ it("Better: When adding new valid product, get successful confirmation", async (
 
 <br/>
 
-### :clap:  Doing It Right Example: Testing many input permutations with “fast-check”
+### :clap:  Doing It Right Example: Testing many input permutations with “mocha-testcheck”
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg
+![](https://img.shields.io/badge/🔧%20Example%20using%20Mocha-blue.svg
  "Examples with Jest")
 
 ```javascript
-import fc from "fast-check";
+require('mocha-testcheck').install();
+const {expect} = require('chai');
 
-describe("Product service", () => {
-  describe("Adding new", () => {
+describe('Product service', () => {
+  describe('Adding new', () => {
     //this will run 100 times with different random properties
-    it("Add new product with random yet valid properties, always successful", () =>
-      fc.assert(
-        fc.property(fc.integer(), fc.string(), (id, name) => {
-          expect(addNewProduct(id, name).status).toEqual("approved");
-        })
-      ));
-  });
+    check.it('Add new product with random yet valid properties, always successful',
+      gen.int, gen.string, (id, name) => {
+        expect(addNewProduct(id, name).status).to.equal('approved');
+      });
+  })
 });
+
 ```
 
 </details>
@@ -526,7 +517,7 @@ it('When visiting TestJavaScript.com home page, a menu is displayed', () => {
 //Arrange
 
 //Act
-const receivedPage = renderer
+receivedPage tree = renderer
 .create(  <DisplayPage page  =  "http://www.testjavascript.com"  > Test JavaScript < /DisplayPage>)
 .toJSON();
 
@@ -634,8 +625,8 @@ A more elegant alternative is the using the one-line dedicated Chai assertion: e
 it("When no product name, it throws error 400", async() => {
 let errorWeExceptFor = null;
 try {
-  const result = await addNewProduct({});
-} catch (error) {
+  const result = await addNewProduct({name:'nest'});}
+catch (error) {
   expect(error.code).to.equal('InvalidInput');
   errorWeExceptFor = error;
 }
@@ -651,7 +642,7 @@ expect(errorWeExceptFor).not.to.be.null;
 
 ```javascript
 it.only("When no product name, it throws error 400", async() => {
-  await expect(addNewProduct({})).to.eventually.throw(AppError).with.property('code', "InvalidInput");
+  expect(addNewProduct)).to.eventually.throw(AppError).with.property('code', "InvalidInput");
 });
 
 ```
@@ -971,29 +962,29 @@ it("When updating site name, get successful confirmation", async () => {
 
 <br/><br/>
 
-# Section 3️⃣: Frontend Testing
+# Seção 3️⃣: Teste de Frontend
 
-## ⚪ ️ 3.1. Separate UI from functionality
+## ⚪ ️ 3.1. Separar UI da funcionalidade
 
-:white_check_mark: **Do:** When focusing on testing component logic, UI details become a noise that should be extracted, so your tests can focus on pure data. Practically, extract the desired data from the markup in an abstract way that is not too coupled to the graphic implementation, assert only on pure data (vs HTML/CSS graphic details) and disable animations that slow down. You might get tempted to avoid rendering and test only the back part of the UI (e.g. services, actions, store) but this will result in fictional tests that don't resemble the reality and won't reveal cases where the right data doesn't even arrive in the UI
-
-
-<br/>
-
-❌ **Otherwise:** The pure calculated data of your test might be ready in 10ms, but then the whole test will last 500ms (100 tests = 1 min) due to some fancy and irrelevant animation
+:white_check_mark: **Faça:** Ao focar no teste da lógica dos componentes, os detalhes da interface do usuário se tornam um ruído que deve ser extraído, para que seus testes possam se concentrar em dados puros. Na prática, extraia os dados desejados da marcação de uma maneira abstrata que não seja muito acoplada à implementação gráfica, afirme apenas dados puros (vs detalhes gráficos de HTML/CSS) e desative animações que diminuem a velocidade. Você pode cair na tentação de evitar renderizar e testar apenas a parte de trás da interface do usuário (por exemplo, serviços, ações, armazenamento), mas isso resultará em testes fictícios que não se assemelham à realidade e não revelam casos em que os dados corretos nem chegam na interface do usuário
 
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Os dados puramente calculados do seu teste podem estar prontos em 10 ms, mas o teste inteiro durará 500 ms (100 testes = 1 min) devido a alguma animação sofisticada e irrelevante
+
 
 <br/>
 
-### :clap: Doing It Right Example: Separating out the UI details
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20React-blue.svg
- "Examples with React") ![](https://img.shields.io/badge/🔧%20Example%20using%20React%20Testing%20Library-blue.svg
- "Examples with react-testing-library")
+<br/>
+
+### :clap: Exemplo Fazendo Certo: Separando os detalhes da interface do usuário
+
+![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React-blue.svg
+ "Exemplos com React") ![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React%20Testing%20Library-blue.svg
+ "Exemplos com react-testing-library")
 
 ```javascript
 test('When users-list is flagged to show only VIP, should display only VIP members', () => {
@@ -1016,7 +1007,7 @@ test('When users-list is flagged to show only VIP, should display only VIP membe
 
 <br/>
 
-### :thumbsdown: Anti Pattern Example: Assertion mix UI details and data
+### :thumbsdown: Exemplo Anti-padrão: Asserções misturam detalhes da UI e dados
 ```javascript
 test('When flagging to show only VIP, should display only VIP members', () => {
   // Arrange
@@ -1042,24 +1033,24 @@ test('When flagging to show only VIP, should display only VIP members', () => {
 <br/><br/>
 
 
-## ⚪ ️ 3.2 Query HTML elements based on attributes that are unlikely to change
+## ⚪ ️ 3.2 Consultar elementos HTML com base em atributos que provavelmente não serão alterados
 
-:white_check_mark: **Do:** Query HTML elements based on attributes that are likely to survive graphic changes unlike CSS selectors and like form labels. If the designated element doesn't have such attributes, create a dedicated test attribute like 'test-id-submit-button'. Going this route not only ensures that your functional/logic tests never break because of look & feel changes but also it becomes clear to the entire team that this element and attribute are utilized by tests and shouldn't get removed
-
-<br/>
-
-❌ **Otherwise:** You want to test the login functionality that spans many components, logic and services, everything is set up perfectly - stubs, spies, Ajax calls are isolated. All seems perfect. Then the test fails because the designer changed the div CSS class from 'thick-border' to 'thin-border'
+:white_check_mark: **Faça*:** Consulte elementos HTML com base em atributos que provavelmente sobreviverão a alterações gráficas, diferentemente dos seletores CSS e sim como os rótulos de formulário. Se o elemento designado não tiver esses atributos, crie um atributo dedicado a teste  como 'test-id-submit-button'. Seguir essa rota não apenas garante que seus testes funcionais/lógicos nunca sejam quebrados devido a alterações de aparência, mas também fica claro para toda a equipe que esse elemento e atributo são utilizados por testes e não devem ser removidos
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Você deseja testar a funcionalidade de login que abrange muitos componentes, lógica e serviços, tudo está configurado perfeitamente - stubs, spies, chamadas Ajax são isoladas. Tudo parece perfeito. Em seguida, o teste falha porque o designer alterou a classe CSS da div de 'thick-border' para 'thin-border'
 
 <br/>
 
-### :clap: Doing It Right Example: Querying an element using a dedicated attrbiute for testing
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20React-blue.svg
- "Examples with React")
+<br/>
+
+### :clap: Exemplo Fazendo Certo: Consultando um elemento usando um atributo dedicado para teste
+
+![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React-blue.svg
+ "Exemplos com React")
  
 ```html
 // the markup code (part of React component)
@@ -1079,14 +1070,14 @@ test('When flagging to show only VIP, should display only VIP members', () => {
     // Act
     const { getByTestId } = render(<dashboardMetric value={undefined}/>);    
     
-    expect(getByTestId('errorsLabel').text()).toBe("0");
+    expect(getByTestId('errorsLabel')).text()).toBe("0");
   });
 
 ```
 
 <br/>
 
-### :thumbsdown: Anti-Pattern Example: Relying on CSS attributes
+### :thumbsdown: Exemplo Anti-padrão: Confiando em atributos CSS
 ```html
 <!-- the markup code (part of React component) -->
 <span id="metric" className="d-flex-column">{value}</span> <!-- what if the designer changes the classs? -->
@@ -1109,28 +1100,28 @@ test('Whenever no data is passed, error metric shows zero', () => {
 
 <br/>
 
-## ⚪ ️ 3.3 Whenever possible, test with a realistic and fully rendered component
+## ⚪ ️ 3.3 Sempre que possível, teste com um componente realista e totalmente renderizado
 
-:white_check_mark: **Do:** Whenever reasonably sized, test your component from outside like your users do, fully render the UI, act on it and assert that the rendered UI behaves as expected. Avoid all sort of mocking, partial and shallow rendering - this approach might result in untrapped bugs due to lack of details and harden the maintenance as the tests mess with the internals (see bullet 'Favour blackbox testing'). If one of the child components is significantly slowing down (e.g. animation) or complicating the setup - consider explicitly replacing it with a fake
+:white_check_mark: **Faça:** Sempre que tiver um tamanho razoável, teste seu componente de fora como os usuários, renderize a interface do usuário, atue sobre ela e afirme que a interface do usuário renderizada se comporta conforme o esperado. Evite todo tipo de simulação, renderização parcial e superficial - essa abordagem pode resultar em erros não capturados devido à falta de detalhes e dificultar a manutenção, pois os testes interferem nos internos (veja o marcador 'Favorecer o teste de caixa preta'). Se um dos componentes filhos estiver desacelerando significativamente (por exemplo, animação) ou complicando a instalação - considere substituí-lo explicitamente por um falso
 
-With all that said, a word of caution is in order: this technique works for small/medium components that pack a reasonable size of child components. Fully rendering a component with too many children will make it hard to reason about test failures (root cause analysis) and might get too slow. In such cases, write only a few tests against that fat parent component and more tests against its children
-
-<br/>
-
-❌ **Otherwise:** When poking into a component's internal by invoking its private methods, and checking the inner state - you would have to refactor all tests when refactoring the components implementation. Do you really have a capacity for this level of maintenance?
-
+Com tudo isso dito, uma palavra de cautela é necessária: essa técnica funciona para componentes pequenos/médios que contêm um tamanho razoável de componentes filhos. A renderização completa de um componente com muitos filhos dificultará o raciocínio sobre falhas de teste (análise de causa raiz) e poderá ficar muito lenta. Nesses casos, escreva apenas alguns testes contra esse componente pai pesado e mais testes contra seus filhos
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Ao entrar no interno de um componente, invocando seus métodos privados e verificando o estado interno - você teria que refatorar todos os testes ao refatorar a implementação dos componentes. Você realmente tem capacidade para esse nível de manutenção?
+
 
 <br/>
 
-### :clap: Doing It Right Example: Working realstically with a fully rendered component
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20React-blue.svg
- "Examples with React") ![](https://img.shields.io/badge/🔧%20Example%20using%20Enzyme-blue.svg
- "Examples with Enzyme")
+<br/>
+
+### :clap: Exemplo Fazendo Certo: Trabalhando realisticamente com um componente totalmente renderizado
+
+![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React-blue.svg
+ "Exemplos com React") ![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20Enzyme-blue.svg
+ "Exemplos com Enzyme")
  
 ```javascript
 class Calendar extends React.Component {
@@ -1162,7 +1153,7 @@ test('Realistic approach: When clicked to show filters, filters are displayed', 
 
 ```
 
-### :thumbsdown: Anti-Pattern Example: Mocking the reality with shallow rendering
+### :thumbsdown: Exemplo Anti-padrão: Simulando a realidade com renderização superficial
 ```javascript
 
 test('Shallow/mocked approach: When clicked to show filters, filters are displayed', () => {
@@ -1185,25 +1176,25 @@ test('Shallow/mocked approach: When clicked to show filters, filters are display
 <br/>
 
 
-## ⚪ ️ 3.4 Don't sleep, use frameworks built-in support for async events. Also try to speed things up
+## ⚪ ️ 3.4 Não durma, use o suporte incorporado de frameworks para eventos assíncronos. Também tente acelerar as coisas
 
-:white_check_mark: **Do:** In many cases, the unit under test completion time is just unknown (e.g. animation suspends element appearance) - in that case, avoid sleeping (e.g. setTimeOut) and prefer more deterministic methods that most platforms provide. Some libraries allows awaiting on operations (e.g. [Cypress cy.request('url')](https://docs.cypress.io/guides/references/best-practices.html#Unnecessary-Waiting)), other provide API for waiting like [@testing-library/dom method wait(expect(element))](https://testing-library.com/docs/guide-disappearance). Sometimes a more elegant way is to stub the slow resource, like API for example, and then once the response moment becomes deterministic the component can be explicitly re-rendered. When depending upon some external component that sleeps, it might turn useful to [hurry-up the clock](https://jestjs.io/docs/en/timer-mocks). Sleeping is a pattern to avoid because it forces your test to be slow or risky (when waiting for a too short period). Whenever sleeping and polling is inevitable and there's no support from the testing framework, some npm libraries like [wait-for-expect](https://www.npmjs.com/package/wait-for-expect) can help with a semi-deterministic solution 
+:white_check_mark: **Faça:** Em muitos casos, o tempo de conclusão da unidade em teste é desconhecido (por exemplo, a animação suspende a aparência do elemento) - nesse caso, evite dormir (por exemplo, setTimeOut) e prefira métodos mais determinísticos que a maioria das plataformas fornece. Algumas bibliotecas permitem aguardar operações (por exemplo, [Cypress cy.request('url')](https://docs.cypress.io/guides/references/best-practices.html#Unnecessary-Waiting)), outras fornecem API para esperar como [@testing-library/dom method wait(expect(element))](https://testing-library.com/docs/guide-disappearance). Às vezes, uma maneira mais elegante é esboçar o recurso lento, como a API, por exemplo, e depois que o momento da resposta se torna determinístico, o componente pode ser explicitamente renderizado novamente. Quando, dependendo de algum componente externo que dorme, pode ser útil [apressar o relógio](https://jestjs.io/docs/en/timer-mocks). Dormir é um padrão a ser evitado, porque força o teste a ser lento ou arriscado (ao esperar por um período muito curto). Sempre que dormir e pesquisar for inevitável e não há suporte do framework de teste, algumas bibliotecas do NPM, como [wait-for-expect](https://www.npmjs.com/package/wait-for-expect) podem ajudar com uma solução semi-determinística 
 <br/>
 
-❌ **Otherwise:** When sleeping for a long time, tests will be an order of magnitude slower. When trying to sleep for small numbers, test will fail when the unit under test didn't respond in a timely fashion. So it boils down to a trade-off between flakiness and bad performance
+❌ **Caso contrário:** Ao dormir por um longo tempo, os testes serão uma ordem de magnitude mais lenta. Ao tentar dormir por pequenos números, o teste falha quando a unidade em teste não responde em tempo hábil. Portanto, tudo se resume a uma troca entre descamação e mau desempenho
 
-
-<br/>
-
-<details><summary>✏ <b>Code Examples</b></summary>
 
 <br/>
 
-### :clap: Doing It Right Example: E2E API that resolves only when the async operations is done (Cypress)
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20React-blue.svg
- "Examples with React") ![](https://img.shields.io/badge/🔧%20Example%20using%20React%20Testing%20Library-blue.svg
- "Examples with react-testing-library")
+<br/>
+
+### :clap: Exemplo Fazendo Certo: API E2E que resolve somente quando as operações assíncronas são concluídas (Cypress)
+
+![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React-blue.svg
+ "Exemplos com React") ![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React%20Testing%20Library-blue.svg
+ "Exemplos com react-testing-library")
 
 ```javascript
 // using Cypress
@@ -1213,7 +1204,7 @@ cy.wait('@products')// wait for route to appear
 
 ```
 
-### :clap: Doing It Right Example: Testing library that waits for DOM elements
+### :clap: Exemplo Fazendo Certo: Biblioteca de teste que aguarda elementos do DOM
 
 ```javascript
 // @testing-library/dom
@@ -1231,7 +1222,7 @@ test('movie title appears', async () => {
 
 ```
 
-### :thumbsdown: Anti-Pattern Example: custom sleep code
+### :thumbsdown: Exemplo Anti-padrão: código de suspensão personalizado
 ```javascript
 
 test('movie title appears', async () => {
@@ -1258,24 +1249,24 @@ test('movie title appears', async () => {
 
 <br/>
 
-## ⚪ ️ 3.5. Watch how the content is served over the network
+## ⚪ ️ 3.5. Veja como o conteúdo é servido na rede
 
-![](https://img.shields.io/badge/🔧%20Example%20using%20Google%20LightHouse-blue.svg
- "Examples with Lighthouse")
+![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20Google%20LightHouse-blue.svg
+ "Exemplo com Lighthouse")
 
-✅ **Do:** Apply some active monitor that ensures the page load under real network is optimized - this includes any UX concern like slow page load or un-minified bundle. The inspection tools market is no short: basic tools like [pingdom](https://www.pingdom.com/), AWS CloudWatch, [gcp StackDriver](https://cloud.google.com/monitoring/uptime-checks/) can be easily configured to watch whether the server is alive and response under a reasonable SLA. This only scratches the surface of what might get wrong, hence it's preferable to opt for tools that specialize in frontend (e.g. [lighthouse](https://developers.google.com/web/tools/lighthouse/), [pagespeed](https://developers.google.com/speed/pagespeed/insights/)) and perform richer analysis. The focus should be on symptoms, metrics that directly affect the UX, like page load time, [meaningful paint](https://scotch.io/courses/10-web-performance-audit-tips-for-your-next-billion-users-in-2018/fmp-first-meaningful-paint), [time until the page gets interactive (TTI)](https://calibreapp.com/blog/time-to-interactive/). On top of that, one may also watch for technical causes like ensuring the content is compressed, time to the first byte, optimize images, ensuring reasonable DOM size, SSL and many others. It's advisable to have these rich monitors both during development, as part of the CI and most important - 24x7 over the production's servers/CDN
-
-<br/>
-
-❌ **Otherwise:** It must be disappointing to realize that after such great care for crafting a UI, 100% functional tests passing and sophisticated bundling - the UX is horrible and slow due to CDN misconfiguration
+✅ **Faça:** Aplique um monitor ativo que garanta que o carregamento da página na rede real seja otimizado - isso inclui qualquer preocupação de UX, como carregamento lento da página ou pacote não minificado. O mercado de ferramentas de inspeção não é curto: ferramentas básicas como [pingdom](https://www.pingdom.com/), AWS CloudWatch, [gcp StackDriver](https://cloud.google.com/monitoring/uptime-checks/) podem ser facilmente configuradas para verificar se o servidor está ativo e responde sob um SLA razoável. Isso apenas arranha a superfície do que pode estar errado; portanto, é preferível optar por ferramentas especializadas em frontend(por exemplo, [lighthouse](https://developers.google.com/web/tools/lighthouse/), [pagespeed](https://developers.google.com/speed/pagespeed/insights/)) e realizar análises mais ricas. O foco deve estar nos sintomas, nas métricas que afetam diretamente o UX, como o tempo de carregamento da página, [meaningful paint](https://scotch.io/courses/10-web-performance-audit-tips-for-your-next-billion-users-in-2018/fmp-first-meaningful-paint), [ttempo até a página ficar interativa (TTI)](https://calibreapp.com/blog/time-to-interactive/). Além disso, também é possível observar causas técnicas, como garantir que o conteúdo seja compactado, tempo até o primeiro byte, otimizar imagens, garantir tamanho razoável de DOM, SSL e muitos outros. É aconselhável ter esses monitores avançados durante o desenvolvimento, como parte do CI e o mais importante - 24x7 nos servidores de produção/CDN
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Deve ser decepcionante perceber que, após um cuidado tão grande na criação de uma interface do usuário, testes 100% funcionais passando e empacotamento sofisticado - o UX é horrível e lento devido à configuração incorreta da CDN
 
-### :clap: Doing It Right Example: Lighthouse page load inspection report
+<br/>
 
-![](/assets/lighthouse2.png "Lighthouse page load inspection report")
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
+
+### :clap: Exemplo Fazendo Certo: Relatório de inspeção de carregamento de página do Lighthouse
+
+![](/assets/lighthouse2.png "Relatório de inspeção de carregamento de página do Lighthouse")
 
 
 </details>
@@ -1283,25 +1274,25 @@ test('movie title appears', async () => {
 
 <br/>
 
-## ⚪ ️ 3.6 Stub flakky and slow resources like backend APIs
+## ⚪ ️ 3.6 Esboce recursos escamosos e lentos, como APIs de backend
 
-:white_check_mark: **Do:** When coding your mainstream tests (not E2E tests), avoid involving any resource that is beyond your responsibility and control like backend API and use stubs instead (i.e. test double). Practically, instead of real network calls to APIs, use some test double library (like [Sinon](https://sinonjs.org/), [Test doubles](https://www.npmjs.com/package/testdouble), etc) for stubbing the API response. The main benefit is preventing flakiness - testing or staging APIs by definition are not highly stable and from time to time will fail your tests although YOUR component behaves just fine (production env was not meant for testing and it usually throttles requests). Doing this will allow simulating various API behavior that should drive your component behavior as when no data was found or the case when API throws an error. Last but not least, network calls will greatly slow down the tests
-
-<br/>
-
-❌ **Otherwise:** The average test runs no longer than few ms, a typical API call last 100ms>, this makes each test ~20x slower
-
+:white_check_mark: **Faça:** Ao codificar seus testes convencionais (não os testes E2E), evite envolver qualquer recurso que esteja além de sua responsabilidade e controle como a API de backend e use esboços (por exemplo, teste duplo). Na prática, em vez de chamadas de rede reais para APIs, use alguma biblioteca de teste duplo (como [Sinon](https://sinonjs.org/), [Test doubles](https://www.npmjs.com/package/testdouble), etc) para esboçar a resposta da API. O principal benefício é evitar falhas - APIs de teste ou preparo, por definição, não são altamente estáveis ​​e, de tempos em tempos, serão reprovados em seus testes, embora SEU componente se comporte perfeitamente (o ambiente de produção não foi projetado para testes e geralmente limita as solicitações). Isso permitirá simular vários comportamentos da API que devem direcionar o comportamento do componente como quando nenhum dado foi encontrado ou o caso em que a API gera um erro. Por último, mas não menos importante, as chamadas de rede desacelerarão bastante os testes
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Um teste médio é executado em não mais do que alguns ms, uma chamada típica da API dura 100ms>, isso torna cada teste ~ 20x mais lento
+
 
 <br/>
 
-### :clap: Doing It Right Example: Stubbing or intercepting API calls
-![](https://img.shields.io/badge/🔧%20Example%20using%20React-blue.svg
- "Examples with React") ![](https://img.shields.io/badge/🔧%20Example%20using%20Jest-blue.svg
- "Examples with react-testing-library")
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
+
+<br/>
+
+### :clap: Exemplo Fazendo Certo: fazendo o esboço ou interceptando chamadas de API
+![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20React-blue.svg
+ "Exemplos com React") ![](https://img.shields.io/badge/🔧%20Exemplo%20usando%20Jest-blue.svg
+ "Exemplos com react-testing-library")
  
 ```javascript
 
@@ -1341,34 +1332,34 @@ test('When no products exist, show the appropriate message', () => {
 
 <br/>
 
-## ⚪ ️ 3.7 Have very few end-to-end tests that spans the whole system
+## ⚪ ️ 3.7 Tenha muito poucos testes de ponta a ponta que abrangem todo o sistema
 
-:white_check_mark: **Do:** Although E2E (end-to-end) usually means UI-only testing with a real browser (See bullet 3.6), for other they mean tests that stretch the entire system including the real backend. The latter type of tests is highly valuable as they cover integration bugs between frontend and backend that might happen due to a wrong understanding of the exchange schema. They are also an efficient method to discover backend-to-backend integration issues (e.g. Microservice A sends the wrong message to Microservice B) and even to detect deployment failures - there are no backend frameworks for E2E testing that are as friendly and mature as UI frameworks like [Cypress](https://www.cypress.io/) and [Pupeteer](https://github.com/GoogleChrome/puppeteer). The downside of such tests is the high cost of configuring an environment with so many components, and mostly their brittleness - given 50 microservices, even if one fails then the entire E2E just failed. For that reason, we should use this technique sparingly and probably have 1-10 of those and no more. That said, even a small number of E2E tests are likely to catch the type of issues they are targeted for - deployment & integration faults. It's advisable to run those over a production-like staging environment
-
-<br/>
-
-❌ **Otherwise:** UI might invest much in testing its functionality only to realizes very late that the backend returned payload (the data schema the UI has to work with) is very different than expected
+:white_check_mark: **Faça:** Embora o E2E (ponta a ponta) geralmente signifique testes apenas da interface do usuário com um navegador real (consulte o item 3.6), para outros, eles significam testes que abrangem todo o sistema, incluindo o backend real. O último tipo de teste é altamente valioso, pois cobre erros de integração entre frontend e backend que podem ocorrer devido a um entendimento incorreto do esquema de troca. Eles também são um método eficiente para descobrir problemas de integração de backend para backend (por exemplo, o microsserviço A envia a mensagem errada para o microsserviço B) e até mesmo para detectar falhas de implantação - não há estruturas de backend para testes E2E que sejam tão amigáveis ​​e maduras quanto as estruturas de interface do usuário, como [Cypress](https://www.cypress.io/) e [Pupeteer](https://github.com/GoogleChrome/puppeteer). A desvantagem de tais testes é o alto custo de configuração de um ambiente com tantos componentes e principalmente sua fragilidade - com 50 microsserviços, mesmo se um falhar, todo o E2E falhou. Por esse motivo, devemos usar essa técnica com moderação e provavelmente ter de 1 a 10 desses e não mais. Dito isto, mesmo um pequeno número de testes E2E provavelmente capturará o tipo de problemas para os quais eles são direcionados - falhas de implantação e integração. É aconselhável executá-las em um ambiente de preparação semelhante à produção
 
 <br/>
 
-## ⚪ ️ 3.8 Speed-up E2E tests by reusing login credentials
-
-:white_check_mark: **Do:** In E2E tests that involve a real backend and rely on a valid user token for API calls, it doesn't payoff to isolate the test to a level where a user is created and logged-in in every request. Instead, login only once before the tests execution start (i.e. before-all hook), save the token in some local storage and reuse it across requests. This seem to violate one of the core testing principle - keep the test autonomous without resources coupling. While this is a valid worry, in E2E tests performance is a key concern and creating 1-3 API requests before starting each individial tests might lead to horrible execution time. Reusing credentials doesn't mean the tests have to act on the same user records - if relying on user records (e.g. test user payments history) than make sure to generate those records as part of the test and avoid sharing their existence with other tests. Also remember that the backend can be faked - if your tests are focused on the frontend it might be better to isolate it and stub the backend API (see bullet 3.6). 
+❌ **Caso contrário:** A interface do usuário pode investir muito em testar sua funcionalidade apenas para perceber muito tarde que a carga útil retornada pelo backend (o esquema de dados com o qual a interface do usuário precisa trabalhar) é muito diferente do esperado
 
 <br/>
 
-❌ **Otherwise:** Given 200 test cases and assuming login=100ms = 20 seconds only for logging-in again and again
+## ⚪ ️ 3.8 Acelere os testes do E2E reutilizando credenciais de login
+
+:white_check_mark: **Faça:** Nos testes E2E que envolvem um back-end real e dependem de um token de usuário válido para chamadas de API, não vale a pena isolar o teste para um nível em que um usuário é criado e conectado a cada solicitação. Em vez disso, efetue login apenas uma vez antes do início da execução dos testes (ou seja, antes de tudo), salve o token em algum armazenamento local e reutilize-o nas solicitações. Isso parece violar um dos principais princípios de teste - mantenha o teste autônomo sem acoplamento de recursos. Embora essa seja uma preocupação válida, nos testes E2E o desempenho é uma preocupação importante e a criação de 1-3 solicitações de API antes de iniciar cada teste individual pode levar a um tempo de execução horrível. Reutilizar credenciais não significa que os testes precisam agir nos mesmos registros do usuário - se depender de registros do usuário (por exemplo, histórico de pagamentos do usuário do teste), certifique-se de gerar esses registros como parte do teste e evitar compartilhar sua existência com outros testes. Lembre-se também de que o backend pode ser falsificado - se seus testes estiverem focados no frontend, pode ser melhor isolá-lo e esboçar a API de backend (consulte o item 3.6).
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Dado 200 casos de teste e assumindo login=100ms = 20 segundos apenas para efetuar login novamente e novamente
 
 <br/>
 
-### :clap: Doing It Right Example: Logging-in before-all and not before-each
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20Cypress-blue.svg
- "Using Cypress to illustrate the idea")
+<br/>
+
+### :clap: Exemplo Fazendo Certo: Fazer login antes de todos e não antes de cada
+
+![](https://img.shields.io/badge/🔨%20Exaeplo%20usando%20Cypress-blue.svg
+ "Usando Cypress para ilustrar a idea")
 
 ```javascript
 let authenticationToken;
@@ -1403,22 +1394,22 @@ beforeEach(setUser => () {
 
 <br/>
 
-## ⚪ ️ 3.9 Have one E2E smoke test that just travels across the site map
+## ⚪ ️ 3.9 Faça um teste de fumaça E2E que viaja pelo mapa do site
 
-:white_check_mark: **Do:** For production monitoring and development-time sanity check, run a single E2E test that visits all/most of the site pages and ensures no one breaks. This type of test brings a great return on investment as it's very easy to write and maintain, but it can detect any kind of failure including functional, network and deployment issues. Other styles of smoke and sanity checking are not as reliable and exhaustive - some ops teams just ping the home page (production) or developers who run many integration tests which don't discover packaging and browser issues. Goes without saying that the smoke test doesn't replace functional tests rather just aim to serve as a quick smoke detector
-
-<br/>
-
-❌ **Otherwise:** Everything might seem perfect, all tests pass, production health-check is also positive but the Payment component had some packaging issue and only the /Payment route is not rendering
-
+:white_check_mark: **Faça:** Para monitoramento de produção e verificação de integridade do tempo de desenvolvimento, execute um único teste E2E que visite todas/a maioria das páginas do site e garanta que nenhuma quebre. Esse tipo de teste traz um ótimo retorno do investimento, pois é muito fácil de escrever e manter, mas pode detectar qualquer tipo de falha, incluindo problemas funcionais, de rede e de implantação. Outros estilos de verificação de fumaça e sanidade não são tão confiáveis ​​e exaustivos - algumas equipes de operações apenas fazem ping na página inicial (produção) ou desenvolvedores que executam muitos testes de integração os quais não descobrem problemas de empacotamento e de navegador. Nem precisa dizer que o teste de fumaça não substitui os testes funcionais, apenas visa servir como um detector de fumaça rápido
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Tudo pode parecer perfeito, todos os testes são aprovados, a verificação de integridade da produção também é positiva, mas o componente Payment teve algum problema de embalagem e apenas a rota /Payment não está sendo processada
+
 
 <br/>
 
-### :clap: Doing It Right Example: Smoke travelling across all pages
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
+
+<br/>
+
+### :clap: Exemplo Fazendo Certo: Fumaça viajando por todas as páginas
 ![](https://img.shields.io/badge/🔨%20Example%20using%20Cypress-blue.svg
  "Using Cypress to illustrate the idea")
 ```javascript
@@ -1439,22 +1430,22 @@ it('When doing smoke testing over all page, should load them all successfully', 
 
 <br/>
 
-## ⚪ ️ 3.10 Expose the tests as a live collaborative document
+## ⚪ ️ 3.10 Expor os testes como um documento colaborativo vivo
 
-:white_check_mark: **Do:** Besides increasing app reliability, tests bring another attractive opportunity to the table - serve as live app documentation. Since tests inherently speak at a less-technical and product/UX language, using the right tools they can serve as a communication artifact that greatly aligns all the peers - developers and their customers. For example, some frameworks allow expressing the flow and expectations (i.e. tests plan) using a human-readable language so any stakeholder, including product managers, can read, approve and collaborate on the tests which just became the live requirements document. This technique is also being referred to as 'acceptance test' as it allows the customer to define his acceptance criteria in plain language. This is [BDD (behavior-driven testing)](https://en.wikipedia.org/wiki/Behavior-driven_development) at its purest form. One of the popular frameworks that enable this is [Cucumber which has a JavaScript flavor](https://github.com/cucumber/cucumber-js), see example below. Another similar yet different opportunity, [StoryBook](https://storybook.js.org/), allows exposing UI components as a graphic catalog where one can walk through the various states of each component (e.g. render a grid w/o filters, render that grid with multiple rows or with none, etc), see how it looks like, and how to trigger that state - this can appeal also to product folks but mostly serves as live doc for developers who consume those components.
+:white_check_mark: **Faça:** Além de aumentar a confiabilidade do aplicativo, os testes trazem outra oportunidade atraente para a mesa - servem como documentação viva do aplicativo. Como os testes falam inerentemente em uma linguagem menos técnica e de produto/UX, usando as ferramentas certas, eles podem servir como um artefato de comunicação que alinha muito os colegas - desenvolvedores e seus clientes. Por exemplo, algumas estruturas permitem expressar o fluxo e as expectativas (ou seja, plano de testes) usando uma linguagem legível por humanos, para que qualquer parte interessada, incluindo gerentes de produto, possa ler, aprovar e colaborar nos testes que acabaram de se tornar o documento de requisitos dinâmicos. Essa técnica também está sendo chamada de 'teste de aceitação', pois permite ao cliente definir seus critérios de aceitação em linguagem simples. Isso é [BDD (teste orientado ao comportamento)](https://en.wikipedia.org/wiki/Behavior-driven_development) na sua forma mais pura. Um dos frameworks populares que permitem isso é [Cucumber que tem um sabor de JavaScript](https://github.com/cucumber/cucumber-js), veja o exemplo abaixo. Outra oportunidade semelhante, porém diferente, [StoryBook](https://storybook.js.org/), permite expor componentes da interface do usuário como um catálogo gráfico, onde é possível percorrer os vários estados de cada componente (por exemplo. renderizar uma grid sem filtros, renderizar essa grid com várias linhas ou sem nenhuma, etc.), ver como ele se parece e como acionar esse estado - isso também pode atrair as pessoas do produto, mas serve principalmente como documento ativo para desenvolvedores que consomem esses componentes.
 
-❌ **Otherwise:** After investing top resources on testing, it's just a pity not to leverage this investment and win great value
+❌ **Otherwise:** Depois de investir muitos recursos em testes, é uma pena não alavancar esse investimento e obter grande valor
 
-
-<br/>
-
-<details><summary>✏ <b>Code Examples</b></summary>
 
 <br/>
 
-### :clap: Doing It Right Example: Describing tests in human-language using cucumber-js
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20Cucumber-blue.svg  "Examples using Cucumber")
+<br/>
+
+### :clap: Exemplo Fazendo Certo: Descrevendo testes em linguagem humana usando cucumber-js
+
+![](https://img.shields.io/badge/🔨%20Exemplo%20usando%20Cocumber-blue.svg  "Exemplos usando Cucumber")
 ```javascript
 // this is how one can describe tests using cucumber: plain language that allows anyone to understand and collaborate
 
@@ -1472,44 +1463,42 @@ Feature: Twitter new tweet
     
 ```
 
-### :clap: Doing It Right Example: Visualizing our components, their various states and inputs using Storybook
-![](https://img.shields.io/badge/🔨%20Example%20using%20StoryBook-blue.svg "Using StoryBook")
-
-![alt text](assets/story-book.jpg "Storybook")
+### :clap: Exemplo Fazendo Certo: Visualizando nossos componentes, seus vários estados e entradas usando o Storybook
+![](https://img.shields.io/badge/🔨%20Example%20using%20StoryBook-blue.svg "Usando StoryBook")
 
 
 </details>
 
-<br/><br/>
 
 
-## ⚪ ️ 3.11 Detect visual issues with automated tools
+
+## ⚪ ️ 3.11 Detecte problemas visuais com ferramentas automatizadas
 
 
-:white_check_mark: **Do:** Setup automated tools to capture UI screenshots when changes are presented and detect visual issues like content overlapping or breaking. This ensures that not only the right data is prepared but also the user can conveniently see it. This technique is not widely adopted, our testing mindset leans toward functional tests but it's the visuals what the user experience and with so many device types it's very easy to overlook some nasty UI bug. Some free tools can provide the basics - generate and save screenshots for the inspection of human eyes. While this approach might be sufficient for small apps, it's flawed as any other manual testing that demands human labor anytime something changes. On the other hand, it's quite challenging to detect UI issues automatically due to the lack of clear definition - this is where the field of 'Visual Regression' chime in and solve this puzzle by comparing old UI with the latest changes and detect differences. Some OSS/free tools can provide some of this functionality (e.g. [wraith](https://github.com/BBC-News/wraith), [PhantomCSS]([https://github.com/HuddleEng/PhantomCSS](https://github.com/HuddleEng/PhantomCSS)) but might charge signficant setup time. The commercial line of tools (e.g. [Applitools](https://applitools.com/), [Percy.io](https://percy.io/)) takes is a step further by smoothing the installation and packing advanced features like management UI, alerting, smart capturing by elemeinating  'visual noise' (e.g. ads, animations) and even root cause analysis of the DOM/css changes that led to the issue
-
-<br/>
-
-❌ **Otherwise:** How good is a content page that display great content (100% tests passed), loads instantly but half of the content area is hidden?
-
+:white_check_mark: **Faça:** Configure ferramentas automatizadas para capturar a tela da interface do usuário quando alterações forem apresentadas e detectar problemas visuais, como sobreposição ou quebra de conteúdo. Isso garante que não apenas os dados corretos sejam preparados, mas também que o usuário possa vê-los convenientemente. Essa técnica não é amplamente adotada, nossa mentalidade de teste se inclina para testes funcionais, mas é o visual que o usuário experimenta e, com tantos tipos de dispositivos, é muito fácil ignorar alguns erros desagradáveis ​​da interface do usuário. Algumas ferramentas gratuitas podem fornecer o básico - gerar e salvar capturas de tela para a inspeção dos olhos humanos. Embora essa abordagem possa ser suficiente para aplicativos pequenos, ela é falha como qualquer outro teste manual que exige mão de obra humana sempre que algo muda. Por outro lado, é bastante desafiador detectar problemas de interface do usuário automaticamente devido à falta de definição clara - é aqui que o campo de 'Regressão Visual' entra em cena e resolve esse quebra-cabeça comparando a interface antiga com as alterações mais recentes e detectando diferenças. Algumas ferramentas OSS/gratuitas podem fornecer algumas dessas funcionalidades (por exemplo, [wraith](https://github.com/BBC-News/wraith), [PhantomCSS]([https://github.com/HuddleEng/PhantomCSS](https://github.com/HuddleEng/PhantomCSS)) mas pode cobrar um tempo significativo de configuração. A linha comercial de ferramentas (por exemplo [Applitools](https://applitools.com/), [Percy.io](https://percy.io/)) dá um passo adiante ao suavizar a instalação e incluir recursos avançados, como interface de gerenciamento, alerta, captura inteligente, eliminando o 'ruído visual' (por exemplo, anúncios, animações) e até mesmo a análise de causa raiz das alterações no DOM/css que levaram ao problema
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+❌ **Caso contrário:** Quão boa é uma página de conteúdo que exibe ótimo conteúdo (100% nos testes aprovados), carrega instantaneamente, mas metade da área de conteúdo está oculta?
+
 
 <br/>
 
-### :thumbsdown: Anti Pattern Example: A typical visual regression - right content that is served badly
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
-![alt text](assets/amazon-visual-regression.jpeg "Amazon page breaks")
+<br/>
+
+### :thumbsdown: Exemplo Anti-padrão: Uma regressão visual típica - conteúdo correto que é mal servido
+
+![alt text](assets/amazon-visual-regression.jpeg "Quebras de página na Amazon")
 
 <br/>
 
 
-### :clap: Doing It Right Example: Configuring wraith to capture and compare UI snapshots
+### :clap: Exemplo Fazendo Certo: Configurando o wraith para capturar e comparar instantâneos da UI
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20Wraith-blue.svg
- "Using Wraith")
+![](https://img.shields.io/badge/🔨%20Exemplo%20usando%20Wraith-blue.svg
+ "Usando Cypress para ilustrar a idea")
 
 ```
 ​# Add as many domains as necessary. Key will act as a label​
@@ -1537,28 +1526,51 @@ paths:
     path: /subscribe
 ```
 
-### :clap: Doing It Right Example: Using Applitools to get snapshot comaprison and other advanced features
+### :clap: Exemplo Fazendo Certo: Usando Applitools para obter comparação de captura instantânea e outros recursos avançados
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20AppliTools-blue.svg
- "Using AppliTools") ![](https://img.shields.io/badge/🔨%20Example%20using%20Cypress-blue.svg
- "Using Cypress to illustrate the idea")
+![](https://img.shields.io/badge/🔨%20Exemplo%20usando%20AppliTools-blue.svg
+ "Usando Cypress to para ilustrar a idea") ![](https://img.shields.io/badge/🔨%20Exemplo%20usando%20Cypress-blue.svg
+ "Usando Cypress para illustrar idea")
 
 ```javascript
 import  *  as todoPage from  '../page-objects/todo-page';
 
 describe('visual validation',  ()  =>  {
-    before(()  =>  todoPage.navigate());
-    beforeEach(()  =>  cy.eyesOpen({ appName: 'TAU TodoMVC' }));
-    afterEach(()  =>  cy.eyesClose());
 
-    it('should look good',  ()  =>  {
-        cy.eyesCheckWindow('empty todo list');
-        todoPage.addTodo('Clean room');
-        todoPage.addTodo('Learn javascript');
-        cy.eyesCheckWindow('two todos');
-        todoPage.toggleTodo(0);
-        cy.eyesCheckWindow('mark as completed');
-    });
+before(()  =>  todoPage.navigate());
+
+beforeEach(()  =>  cy.eyesOpen({ appName:  'TAU TodoMVC'  }));
+
+afterEach(()  =>  cy.eyesClose());
+
+  
+
+it('should look good',  ()  =>  {
+
+cy.eyesCheckWindow('empty todo list');
+
+  
+
+todoPage.addTodo('Clean room');
+
+  
+
+todoPage.addTodo('Learn javascript');
+
+  
+
+cy.eyesCheckWindow('two todos');
+
+  
+
+todoPage.toggleTodo(0);
+
+  
+
+cy.eyesCheckWindow('mark as completed');
+
+});
+
 });
 ```
 
@@ -1572,39 +1584,39 @@ describe('visual validation',  ()  =>  {
 <br/><br/>
 
   
-# Section 4️⃣: Measuring Test Effectiveness
+# Section 4️⃣: Medindo a eficácia dos testes
 
 <br/><br/>
 
-## ⚪ ️ 4.1 Get enough coverage for being confident, ~80% seems to be the lucky number
+## ⚪ ️ 4.1 Obtenha cobertura suficiente para ter confiança, ~ 80% parece ser o número da sorte
 
-:white_check_mark: **Do:** The purpose of testing is to get enough confidence for moving fast, obviously the more code is tested the more confident the team can be. Coverage is a measure of how many code lines (and branches, statements, etc) are being reached by the tests. So how much is enough? 10–30% is obviously too low to get any sense about the build correctness, on the other side 100% is very expensive and might shift your focus from the critical paths to the exotic corners of the code. The long answer is that it depends on many factors like the type of application — if you’re building the next generation of Airbus A380 than 100% is a must, for a cartoon pictures website 50% might be too much. Although most of the testing enthusiasts claim that the right coverage threshold is contextual, most of them also mention the number 80% as a thumb of a rule ([Fowler: “in the upper 80s or 90s”](https://martinfowler.com/bliki/TestCoverage.html)) that presumably should satisfy most of the applications.
+:white_check_mark: **Faça:** O objetivo do teste é obter confiança suficiente para avançar rapidamente, obviamente, quanto mais código for testado, mais confiante a equipe pode ter. Cobertura é uma medida de quantas linhas de código (e ramificações, instruções etc.) estão sendo alcançadas pelos testes. Então, quanto é suficiente? 10-30% é obviamente muito baixo para ter noção da correção da compilação, por outro lado, 100% é muito caro e pode mudar seu foco dos caminhos críticos para os cantos exóticos do código. A resposta longa é que depende de muitos fatores, como o tipo de aplicativo - se você está construindo a próxima geração do Airbus A380, 100% é uma obrigação, para um site de imagens de desenhos animados 50% pode ser demais. Embora a maioria dos entusiastas do teste afirme que o limite de cobertura correto é contextual, a maioria deles também menciona o número 80% como a regra de ouro ([Fowler: “na casa dos 80% ou 90%”](https://martinfowler.com/bliki/TestCoverage.html)) que presumivelmente, deve satisfazer a maioria das aplicações.
 
-Implementation tips: You may want to configure your continuous integration (CI) to have a coverage threshold ([Jest link](https://jestjs.io/docs/en/configuration.html#collectcoverage-boolean)) and stop a build that doesn’t stand to this standard (it’s also possible to configure threshold per component, see code example below). On top of this, consider detecting build coverage decrease (when a newly committed code has less coverage) — this will push developers raising or at least preserving the amount of tested code. All that said, coverage is only one measure, a quantitative based one, that is not enough to tell the robustness of your testing. And it can also be fooled as illustrated in the next bullets
-
-<br/>
-
-
-❌ **Otherwise:**  Confidence and numbers go hand in hand, without really knowing that you tested most of the system — there will also be some fear. and fear will slow you down
-
+Dicas de implementação: Convém configurar sua integração contínua (CI) para ter um limite mínimo de cobertura ([Jest link](https://jestjs.io/docs/en/configuration.html#collectcoverage-boolean)) e interrompa uma compilação que não atenda a esse padrão (também é possível configurar o limite por componente, veja o exemplo de código abaixo). Além disso, considere detectar uma diminuição na cobertura da construção (quando um código recém-confirmado tem menos cobertura) — isso fará com que os desenvolvedores aumentem ou, pelo menos, preservem a quantidade de código testado. Tudo isso dito, a cobertura é apenas uma medida, quantitativa, que não é suficiente para demonstrar a robustez dos seus testes. E também pode ser enganada, como ilustrado nos próximos tópicos
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+
+❌ **Caso contrário:**  Confiança e números andam de mãos dadas, sem realmente saber que você testou a maior parte do sistema - haverá também algum medo. e o medo vai atrasá-lo
+
 
 <br/>
 
-### :clap: Example: A typical coverage report
-![alt text](assets/bp-18-yoni-goldberg-code-coverage.png "A typical coverage report")
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
 <br/>
 
-### :clap: Doing It Right Example: Setting up coverage per component (using Jest)
+### :clap: Exemplo: um relatório de cobertura típico
+![alt text](assets/bp-18-yoni-goldberg-code-coverage.png "Um relatório de cobertura típico")
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20Jest-blue.svg
- "Using Jest")
+<br/>
 
-![alt text](assets/bp-18-code-coverage2.jpeg "Setting up coverage per component (using Jest)")
+### :clap: Exemplo Fazendo Certo: Configurando a cobertura por componente (usando o Jest)
+
+![](https://img.shields.io/badge/🔨%20Exemplo%20usando%20Jest-blue.svg
+ "Usando Jest")
+
+![alt text](assets/bp-18-code-coverage2.jpeg "Configurando a cobertura por componente (usando o Jest)")
 
 </details>
 
@@ -1612,58 +1624,58 @@ Implementation tips: You may want to configure your continuous integration (CI) 
 
 <br/><br/>
 
-## ⚪ ️ 4.2 Inspect coverage reports to detect untested areas and other oddities
+## ⚪ ️ 4.2 Inspecionar relatórios de cobertura para detectar áreas não testadas e outras esquisitices
 
-:white_check_mark: **Do:** Some issues sneak just under the radar and are really hard to find using traditional tools. These are not really bugs but more of surprising application behavior that might have a severe impact. For example, often some code areas are never or rarely being invoked — you thought that the ‘PricingCalculator’ class is always setting the product price but it turns out it is actually never invoked although we have 10000 products in DB and many sales… Code coverage reports help you realize whether the application behaves the way you believe it does. Other than that, it can also highlight which types of code is not tested — being informed that 80% of the code is tested doesn’t tell whether the critical parts are covered. Generating reports is easy — just run your app in production or during testing with coverage tracking and then see colorful reports that highlight how frequent each code area is invoked. If you take your time to glimpse into this data — you might find some gotchas
+:white_check_mark: **Faça:** Alguns problemas se escondem logo abaixo do radar e são realmente difíceis de encontrar usando ferramentas tradicionais. Esses não são realmente erros, mas um comportamento surpreendente do aplicativo que pode ter um impacto grave. Por exemplo, geralmente algumas áreas de código nunca ou raramente são invocadas — você pensou que a classe 'PricingCalculator' está sempre definindo o preço do produto, mas, na verdade, nunca é invocada, embora tenhamos 10000 produtos no banco de dados e muitas vendas... Os relatórios de cobertura de código ajudam a perceber se o aplicativo se comporta da maneira que você acredita. Além disso, ele também pode destacar quais tipos de código não foram testados—ser informado que 80% do código é testado não informa se as partes críticas estão cobertas. Gerar relatórios é fácil—basta executar seu aplicativo em produção ou durante o teste com rastreamento de cobertura e ver relatórios coloridos que destacam a frequência com que cada área de código é invocada. Se você dedicar um tempo para vislumbrar esses dados—poderá encontrar algumas pegadinhas
 <br/>
 
 
-❌ **Otherwise:** If you don’t know which parts of your code are left un-tested, you don’t know where the issues might come from
+❌ **Caso contrário:** Se você não sabe quais partes do seu código são deixadas sem teste, não sabe de onde os problemas podem surgir
 
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
 <br/>
 
-### :thumbsdown: Anti-Pattern Example: What’s wrong with this coverage report? 
+### :thumbsdown: Exemplo Anti-padrão: O que há de errado com este relatório de cobertura?
 
-Based on a real-world scenario where we tracked our application usage in QA and find out interesting login patterns (Hint: the amount of login failures is non-proportional, something is clearly wrong. Finally it turned out that some frontend bug keeps hitting the backend login API)
+Com base em um cenário do mundo real, onde rastreamos o uso de nossos aplicativos no controle de qualidade e descobrimos padrões de login interessantes (Dica: a quantidade de falhas de login não é proporcional, algo está claramente errado. Por fim, verificou-se que algum bug do frontend continua atingindo a API de login do back-end)
 
-![alt text](assets/bp-19-coverage-yoni-goldberg-nodejs-consultant.png "What’s wrong with this coverage report?")
+![alt text](assets/bp-19-coverage-yoni-goldberg-nodejs-consultant.png " que há de errado com este relatório de cobertura?")
 
 </details>
 
 
 <br/><br/>
 
-## ⚪ ️ 4.3 Measure logical coverage using mutation testing
+## ⚪ ️ 4.3 Meça a cobertura lógica usando teste de mutação
 
-:white_check_mark: **Do:**  The Traditional Coverage metric often lies: It may show you 100% code coverage, but none of your functions, even not one, return the right response. How come? it simply measures over which lines of code the test visited, but it doesn’t check if the tests actually tested anything — asserted for the right response. Like someone who’s traveling for business and showing his passport stamps — this doesn’t prove any work done, only that he visited few airports and hotels.
+:white_check_mark: **Faça:**  A métrica de cobertura tradicional geralmente mente: Pode mostrar 100% de cobertura do código, mas nenhuma de suas funções, nem mesmo uma, retorna a resposta correta. Por quê? Ele simplesmente mede sobre quais linhas de código o teste visitou, mas não verifica se os testes realmente testaram alguma coisa— afirmou para a resposta certa. Como alguém que viaja a negócios e mostra seus carimbos de passaporte—isso não prova nenhum trabalho, apenas que ele visitou alguns aeroportos e hotéis.
 
-Mutation-based testing is here to help by measuring the amount of code that was actually TESTED not just VISITED. [Stryker](https://stryker-mutator.io/) is a JavaScript library for mutation testing and the implementation is really neat:
+O teste baseado em mutação está aqui para ajudar, medindo a quantidade de código que foi realmente TESTADO e não apenas VISITADO. [Stryker](https://stryker-mutator.io/) é uma biblioteca JavaScript para teste de mutação e a implementação é realmente legal:
 
-(1) it intentionally changes the code and “plants bugs”. For example the code newOrder.price===0 becomes newOrder.price!=0. This “bugs” are called mutations
+(1) intencionalmente altera o código e "planta bugs". Por exemplo, o código newOrder.price===0 torna-se newOrder.price!=0. Esses "bugs" são chamados de mutações
 
-(2) it runs the tests, if all succeed then we have a problem — the tests didn’t serve their purpose of discovering bugs, the mutations are so-called survived. If the tests failed, then great, the mutations were killed.
+(2) executa os testes, se todos tiverem sucesso, então temos um problema— os testes não serviram ao seu propósito de descobrir bugs, as mutações são chamadas sobreviventes. Se os testes falharem, então ótimo, as mutações foram mortas.
 
-Knowing that all or most of the mutations were killed gives much higher confidence than traditional coverage and the setup time is similar
+Saber que todas ou a maioria das mutações foram mortas dá uma confiança muito maior do que a cobertura tradicional e o tempo de instalação é semelhante
 <br/>
 
 
-❌ **Otherwise:** You’ll be fooled to believe that 85% coverage means your test will detect bugs in 85% of your code
+❌ **Caso contrário:** Você ficará enganado ao acreditar que 85% de cobertura significa que seu teste detectará bugs em 85% do seu código
 
 <br/>
 
-<details><summary>✏ <b>Code Examples</b></summary>
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
 
 <br/>
 
-### :thumbsdown: Anti Pattern Example: 100% coverage, 0% testing
+### :thumbsdown: Exemplo Anti-padrão: 100% de cobertura, 0% de teste
 
-![](https://img.shields.io/badge/🔨%20Example%20using%20Stryker-blue.svg
- "Using Cypress to illustrate the idea")
+![](https://img.shields.io/badge/🔨%20Exemplo%20usando%20Stryker-blue.svg
+ "Usando Stryker")
 ```javascript
 function addNewOrder(newOrder) {
     logger.log(`Adding new order ${newOrder}`);
@@ -1680,9 +1692,9 @@ it("Test addNewOrder, don't use such test names", () => {
 ```
 <br/>
 
-### :clap: Doing It Right Example: Stryker reports, a tool for mutation testing, detects and counts the amount of code that is not tested (Mutations)
+### :clap: Exemplo Fazendo Certo: Stryker reports, uma ferramenta para teste de mutação, detecta e conta a quantidade de código que não foi testado (mutações)
 
-![alt text](assets/bp-20-yoni-goldberg-mutation-testing.jpeg "Stryker reports, a tool for mutation testing, detects and counts the amount of code that is not tested (Mutations)")
+![alt text](assets/bp-20-yoni-goldberg-mutation-testing.jpeg "Stryker reports, uma ferramenta para teste de mutação, detecta e conta a quantidade de código que não foi testado (mutações)")
 
 </details>
 
@@ -1690,22 +1702,22 @@ it("Test addNewOrder, don't use such test names", () => {
 
 <br/><br/>
 
-## ⚪ ️4.4 Preventing test code issues with Test linters
+## ⚪ ️4.4 Impedindo problemas de código de teste com os linters de teste
 
-:white_check_mark: **Do:**  A set of ESLint plugins were built specifically for inspecting the tests code patterns and discover issues. For example, [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha) will warn when a test is written at the global level (not a son of a describe() statement) or when tests are [skipped](https://mochajs.org/#inclusive-tests) which might lead to a false belief that all tests are passing. Similarly, [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) can, for example, warn when a test has no assertions at all (not checking anything)
-
-<br/>
-
-
-❌ **Otherwise:** Seeing 90% code coverage and 100% green tests will make your face wear a big smile only until you realize that many tests aren’t asserting for anything and many test suites were just skipped. Hopefully, you didn’t deploy anything based on this false observation
-
-
-<br/>
-<details><summary>✏ <b>Code Examples</b></summary>
+:white_check_mark: **Faça:**  Um conjunto de plugins ESLint foi construído especificamente para inspecionar os padrões de código de testes e descobrir problemas. Por exemplo, [eslint-plugin-mocha](https://www.npmjs.com/package/eslint-plugin-mocha) avisará quando um teste for escrito em nível global (não é filho de uma declaração describe()) ou quando os testes são [pulados](https://mochajs.org/#inclusive-tests) o que pode levar a uma falsa crença de que todos os testes estão passando. Similarmente, [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) pode, por exemplo, avisar quando um teste não tem asserções (não verificando nada)
 
 <br/>
 
-### :thumbsdown: Anti Pattern Example: A test case full of errors, luckily all are caught by Linters
+
+❌ **Caso contrário:** Ver 90% de cobertura de código e 100% de testes verdes fará com que seu rosto seja um grande sorriso apenas até você perceber que muitos testes não afirmam nada e que muitos conjuntos de testes foram ignorados. Tomara que você não tenha implantado nada com base nessa observação falsa
+
+
+<br/>
+<details><summary>✏ <b>Códigos de Exemplo</b></summary>
+
+<br/>
+
+### :thumbsdown: Exemplo Anti-padrão: Um caso de teste cheio de erros, felizmente, todos são pegos por Linters
 
 ```javascript
 describe("Too short description", () => {
@@ -1885,9 +1897,11 @@ license-checker --summary --failOn BSD
 <br/><br/>
 
 ## ⚪ ️5.6 Constantly inspect for vulnerable dependencies
-:white_check_mark: **Do:**    Even the most reputable dependencies such as Express have known vulnerabilities. This can get easily tamed using community tools such as [npm audit](https://docs.npmjs.com/getting-started/running-a-security-audit), or commercial tools like [snyk](https://snyk.io/) (offer also a free community version). Both can be invoked from your CI on every build
+:white_check_mark: **Do:**    Licensing and plagiarism issues are probably not your main concern right now, but why not tick this box as well in 10 minutes? A bunch of npm packages like license check and plagiarism check (commercial with free plan) can be easily baked into your CI pipeline and inspect for sorrows like dependencies with restrictive licenses or code that was copy-pasted from Stackoverflow and apparently violates some copyrights
+<br/>
 
-❌ **Otherwise:** Keeping your code clean from vulnerabilities without dedicated tools will require to constantly follow online publications about new threats. Quite tedious
+
+❌ **Otherwise:** Even the most reputable dependencies such as Express have known vulnerabilities. This can get easily tamed using community tools such as [npm audit](https://docs.npmjs.com/getting-started/running-a-security-audit), or commercial tools like [snyk](https://snyk.io/) (offer also a free community version). Both can be invoked from your CI on every build
 
 
 <br/>
@@ -1938,7 +1952,7 @@ An efficient update policy may allow some ‘vesting period’ — let the c
 ## ⚪ ️ 5.8 Other, non-Node related, CI tips
 :white_check_mark: **Do:**    This post is focused on testing advice that is related to, or at least can be exemplified with Node JS. This bullet, however, groups few non-Node related tips that are well-known
 
- <ol class="postList"><li name="e3e4" id="e3e4" class="graf graf--li graf-after--p">Use a declarative syntax. This is the only option for most vendors but older versions of Jenkins allows using code or UI</li><li name="1fdc" id="1fdc" class="graf graf--li graf-after--li">Opt for a vendor that has native Docker support</li><li name="edcd" id="edcd" class="graf graf--li graf-after--li">Fail early, run your fastest tests first. Create a ‘Smoke testing’ step/milestone that groups multiple fast inspections (e.g. linting, unit tests) and provide snappy feedback to the code committer</li><li name="0375" id="0375" class="graf graf--li graf-after--li">Make it easy to skim-through all build artifacts including test reports, coverage reports, mutation reports, logs, etc</li><li name="df82" id="df82" class="graf graf--li graf-after--li">Create multiple pipelines/jobs for each event, reuse steps between them. For example, configure a job for feature branch commits and a different one for master PR. Let each reuse logic using shared steps (most vendors provide some mechanism for code reuse)</li><li name="19b0" id="19b0" class="graf graf--li graf-after--li">Never embed secrets in a job declaration, grab them from a secret store or from the job’s configuration</li><li name="b70d" id="b70d" class="graf graf--li graf-after--li">Explicitly bump version in a release build or at least ensure the developer did so</li><li name="957c" id="957c" class="graf graf--li graf-after--li">Build only once and perform all the inspections over the single build artifact (e.g. Docker image)</li><li name="339b" id="339b" class="graf graf--li graf-after--li">Test in an ephemeral environment that doesn’t drift state between builds. Caching node_modules might be the only exception</li></ol>
+ <ol class="postList"><li name="e3e4" id="e3e4" class="graf graf--li graf-after--p">Use a declarative syntax. This is the only option for most vendors but older versions of Jenkins allows using code or UI</li><li name="1fdc" id="1fdc" class="graf graf--li graf-after--li">Opt for a vendor that has native Docker support</li><li name="edcd" id="edcd" class="graf graf--li graf-after--li">Fail early, run your fastest tests first. Create a ‘Smoke testing’ step/milestone that groups multiple fast inspections (e.g. linting, unit tests) and provide snappy feedback to the code committer</li><li name="0375" id="0375" class="graf graf--li graf-after--li">Make it easy to skim-through all build artifacts including test reports, coverage reports, mutation reports, logs, etc</li><li name="df82" id="df82" class="graf graf--li graf-after--li">Create multiple pipelines/jobs for each event, reuse steps between them. For example, configure a job for feature branch commits and a different one for master PR. Let each reuse logic using shared steps (most vendors provide some mechanism for code reuse</li><li name="19b0" id="19b0" class="graf graf--li graf-after--li">Never embed secrets in a job declaration, grab them from a secret store or from the job’s configuration</li><li name="b70d" id="b70d" class="graf graf--li graf-after--li">Explicitly bump version in a release build or at least ensure the developer did so</li><li name="957c" id="957c" class="graf graf--li graf-after--li">Build only once and perform all the inspections over the single build artifact (e.g. Docker image)</li><li name="339b" id="339b" class="graf graf--li graf-after--li">Test in an ephemeral environment that doesn’t drift state between builds. Caching node_modules might be the only exception</li></ol>
 <br/>
 
 
@@ -1995,7 +2009,8 @@ An efficient update policy may allow some ‘vesting period’ — let the c
 <hr/>
 <br/>
 
-## [Bruno Scheufler](https://github.com/BrunoScheufler)
+
+##  [Bruno Scheufler](https://github.com/BrunoScheufler)
 
 **Role:** Tech reviewer and advisor
 
@@ -2010,49 +2025,3 @@ Took care to revise, improve, lint and polish all the texts
 **Role:** Concept, design and great advice
 
 **About:** A savvy frontend developer, CSS expert and emojis freak
-
-## [Kyle Martin](https://github.com/js-kyle)
-
-**Role:** Helps keep this project running, and reviews security related practices
-
-**About:** Loves working on Node.js projects and web application security.
-
-## Contributors ✨
-
-Thanks goes to these wonderful people who have contributed to this repository!
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="http://geospatialscott.blogspot.com/"><img src="https://avatars3.githubusercontent.com/u/1326248?v=4" width="100px;" alt="Scott Davis"/><br /><sub><b>Scott Davis</b></sub></a><br /><a href="#content-stdavis" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/AdrienRedon"><img src="https://avatars2.githubusercontent.com/u/5978436?v=4" width="100px;" alt="Adrien REDON"/><br /><sub><b>Adrien REDON</b></sub></a><br /><a href="#content-AdrienRedon" title="Content">🖋</a></td>
-    <td align="center"><a href="https://twitter.com/NoriSte"><img src="https://avatars0.githubusercontent.com/u/173663?v=4" width="100px;" alt="Stefano Magni"/><br /><sub><b>Stefano Magni</b></sub></a><br /><a href="#content-NoriSte" title="Content">🖋</a></td>
-    <td align="center"><a href="https://www.joer.im"><img src="https://avatars2.githubusercontent.com/u/47742486?v=4" width="100px;" alt="Yeoh Joer"/><br /><sub><b>Yeoh Joer</b></sub></a><br /><a href="#content-yjoer" title="Content">🖋</a></td>
-    <td align="center"><a href="http://jhonnymoreira.dev"><img src="https://avatars0.githubusercontent.com/u/2177742?v=4" width="100px;" alt="Jhonny Moreira"/><br /><sub><b>Jhonny Moreira</b></sub></a><br /><a href="#content-jhonnymoreira" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/Germanika"><img src="https://avatars2.githubusercontent.com/u/8846678?v=4" width="100px;" alt="Ian Germann"/><br /><sub><b>Ian Germann</b></sub></a><br /><a href="#content-Germanika" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/AbdelrahmanHafez"><img src="https://avatars3.githubusercontent.com/u/19984935?v=4" width="100px;" alt="Hafez"/><br /><sub><b>Hafez</b></sub></a><br /><a href="#content-AbdelrahmanHafez" title="Content">🖋</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="http://www.ruxandrafediuc.com"><img src="https://avatars1.githubusercontent.com/u/11021586?v=4" width="100px;" alt="Ruxandra Fediuc"/><br /><sub><b>Ruxandra Fediuc</b></sub></a><br /><a href="#content-ruxandrafed" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/jacklee814"><img src="https://avatars0.githubusercontent.com/u/9951291?v=4" width="100px;" alt="Jack"/><br /><sub><b>Jack</b></sub></a><br /><a href="#content-jacklee814" title="Content">🖋</a></td>
-    <td align="center"><a href="https://www.petercarrero.com"><img src="https://avatars0.githubusercontent.com/u/231727?v=4" width="100px;" alt="Peter Carrero"/><br /><sub><b>Peter Carrero</b></sub></a><br /><a href="#content-aloyr" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/huhgawz"><img src="https://avatars3.githubusercontent.com/u/369338?v=4" width="100px;" alt="Huhgawz"/><br /><sub><b>Huhgawz</b></sub></a><br /><a href="#content-huhgawz" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/haakonmb"><img src="https://avatars1.githubusercontent.com/u/7099302?v=4" width="100px;" alt="Haakon Borch"/><br /><sub><b>Haakon Borch</b></sub></a><br /><a href="#content-haakonmb" title="Content">🖋</a></td>
-    <td align="center"><a href="https://jaimemendoza.com/"><img src="https://avatars3.githubusercontent.com/u/5395811?v=4" width="100px;" alt="Jaime Mendoza"/><br /><sub><b>Jaime Mendoza</b></sub></a><br /><a href="#content-jaimemendozadev" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/camerondunford"><img src="https://avatars0.githubusercontent.com/u/840612?v=4" width="100px;" alt="Cameron Dunford"/><br /><sub><b>Cameron Dunford</b></sub></a><br /><a href="#content-camerondunford" title="Content">🖋</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/shadowspawn"><img src="https://avatars1.githubusercontent.com/u/15719847?v=4" width="100px;" alt="John Gee"/><br /><sub><b>John Gee</b></sub></a><br /><a href="#content-shadowspawn" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/aurelijusrozenas"><img src="https://avatars0.githubusercontent.com/u/3273544?v=4" width="100px;" alt="Aurelijus Rožėnas"/><br /><sub><b>Aurelijus Rožėnas</b></sub></a><br /><a href="#content-aurelijusrozenas" title="Content">🖋</a></td>
-    <td align="center"><a href="http://aaronshivers.com"><img src="https://avatars2.githubusercontent.com/u/42848750?v=4" width="100px;" alt="Aaron"/><br /><sub><b>Aaron</b></sub></a><br /><a href="#content-aaronshivers" title="Content">🖋</a></td>
-    <td align="center"><a href="https://tomdoes.tech/"><img src="https://avatars1.githubusercontent.com/u/8683577?v=4" width="100px;" alt="Tom Nagle"/><br /><sub><b>Tom Nagle</b></sub></a><br /><a href="#content-tomanagle" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/yvesyao"><img src="https://avatars0.githubusercontent.com/u/7723729?v=4" width="100px;" alt="Yves yao"/><br /><sub><b>Yves yao</b></sub></a><br /><a href="#content-yvesyao" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/Userbit"><img src="https://avatars1.githubusercontent.com/u/34487074?v=4" width="100px;" alt="Userbit"/><br /><sub><b>Userbit</b></sub></a><br /><a href="#content-Userbit" title="Content">🖋</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
